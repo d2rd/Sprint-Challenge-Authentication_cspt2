@@ -1,3 +1,7 @@
+- NOTE: I CREATED MY OWN REPO BECAUSE A PREVIOUS REPO USING MONGO EXISTED.  I DID NOT WANT TO REMOVE IT.
+# SPRINT-CHALLENGE-AUTHENTICATION_CSPT2
+https://github.com/d2rd/Sprint-Challenge-Authentication_cspt2
+
 # Sprint Challenge: Authentication - Dad Jokes
 
 This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a concrete project. This Sprint explored Authentication. During this Sprint, you studied Introduction to Authentication, Using Sessions and Cookies, Using JSON Web Tokens (JWT), and Client-side Authentication. In your challenge this week, you will demonstrate proficiency by creating an application that will give you a list of random dad jokes, as long as you are authorized.
@@ -37,10 +41,10 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [ ] Implement the project on this Branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
