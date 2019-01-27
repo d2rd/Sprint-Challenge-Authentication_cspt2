@@ -25,6 +25,23 @@ function register(req, res) {
 
 function login(req, res) {
   // implement user login
+  const creds = req.body;
+  db.findByUsername(creds.username)
+  .then(user => {
+      // username valid   hash from client == hash from db
+    if (user && bcrypt.compareSync(creds.password, user.password)) {
+      const token = generateToken(user)
+      // redirect
+      res.json({ id: user.id, token });
+    } else {
+      // we send back info that allows the front end 
+      // to display a new error message
+      res.status(404).json({err: "invalid username or password"});
+    }
+  })
+  .catch(err => {
+    res.status(500).send(err);
+  });
 }
 
 function getJokes(req, res) {
