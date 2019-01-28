@@ -27,6 +27,19 @@ console.log("POST register success!")
 
 function login(req, res) {
   // implement user login
+  const creds = req.body;
+  db.findByUsername(creds.username)
+    .then(users => {
+      if (users.length && bcrypt.compareSync(creds.password, users[0].password)) {
+        req.session.userId = users[0].id;
+        res.json({username: users[0].username});
+      } else {
+          res.status(404).json({err: "Invalid username or password"});
+      }
+    })
+    .catch(err => {
+      res.status(500).json({err: "Server error"});
+    });
 }
 
 function getJokes(req, res) {
