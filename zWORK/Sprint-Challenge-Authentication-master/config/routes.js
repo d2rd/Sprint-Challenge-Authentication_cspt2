@@ -10,10 +10,10 @@ module.exports = server => {
 
 function register(req, res) {
   // implement user registration
-  console.log("POST register is running")
+  // console.log("POST register is running")
     const user = req.body;
     user.password = bcrypt.hashSync(user.password, 16);
-    db('auth').insert(user)
+    db.insert(user)
       .then(ids => {
         res.status(201).json({ id: ids[0] });
       })
